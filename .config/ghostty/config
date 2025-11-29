@@ -1,0 +1,76 @@
+# Fonts
+# font-family = CartographCF Nerd Font
+# font-family = Maple Mono NF CN
+font-family = MonoLisa
+font-feature = +ss02, +calt, +liga, -zero, -ss01, -ss03, +ss04, -ss08, +ss11, +ss12, -ss13, -ss14, +ss15, +ss16, +ss17, -ss06, -ss18
+  # "buffer_font_features": {
+  #   "ss02": true, // 花式斜体 ffff ssss I love it ❤️
+  #   "calt": true, // {||}
+  #   "liga": true,
+  #   "zero": false, // 0000
+  #   "ss01": false, // **** * ** *** *a
+  #   "ss03": false, // gg
+  #   "ss04": true, // gg
+  #   "ss08": false, // ()
+  #   "ss11": true, // 0xF
+  #   "ss12": true, // \\ 转义符更细
+  #   "ss13": false, // $$
+  #   "ss14": false, // &&&
+  #   "ss15": true, // iiii
+  #   "ss16": true, // rrr
+  #   "ss17": true, // ..=
+  #   "ss06": false, // @@@
+  #   "ss18": false // @@@
+  # },
+font-size = 15
+
+
+# Theme
+background-opacity = 0.9
+background-blur-radius = 80
+# theme = Xcode Dark hc
+theme = TokyoNight Night
+
+bold-is-bright = true
+
+# Window
+macos-titlebar-style = hidden
+
+# Icon
+# macos-icon = glass
+# macos-icon = custom-style
+# macos-icon-frame = plastic
+# macos-icon-screen-color = #2a2a36,#957fb8
+# macos-icon-ghost-color = #FF79C6
+
+# Shaders
+# custom-shader = ghostty-shaders/bloom.glsl
+# custom-shader = ghostty-shaders/animated-gradient-shader.glsl
+# custom-shader = ghostty-shaders/gears-and-belts.glsl
+# custom-shader = ghostty-shaders/mnoise.glsl
+# custom-shader = ghostty-shaders/cursor_blaze.glsl
+# custom-shader = ghostty-shaders/cursor_smear.glsl
+# custom-shader = ghostty-shaders/cursor_blaze.glsl
+custom-shader = shaders/ripple_cursor.glsl  
+custom-shader = shaders/cursor_warp.glsl 
+cursor-style-blink = true
+custom-shader-animation = always
+
+# Keybind
+keybind = global:super+enter=toggle_quick_terminal
+# Others
+auto-update = download
+auto-update-channel = tip
+quick-terminal-position = bottom
+macos-option-as-alt = true
+window-save-state = always
+window-padding-color = extend
+window-padding-balance = true
+window-padding-x = 5
+window-padding-y = 0
+# fix xterm-ghostty
+
+keybind = performable:ctrl+w>h=goto_split:left
+keybind = performable:ctrl+w>j=goto_split:bottom
+keybind = performable:ctrl+w>k=goto_split:top
+keybind = performable:ctrl+w>l=goto_split:right
