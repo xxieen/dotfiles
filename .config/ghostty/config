@@ -29,7 +29,7 @@ font-size = 15
 background-opacity = 0.9
 background-blur-radius = 80
 # theme = Xcode Dark hc
-theme = TokyoNight Night
+theme = TokyoNight
 
 bold-is-bright = true
 

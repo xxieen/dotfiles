@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  build = "cargo build --release",
   dependencies = {
     -- { "marcoSven/blink-cmp-yanky" },
     { "xzbdmw/colorful-menu.nvim", opts = {} },
@@ -23,6 +24,9 @@ return {
             kind_icon = {
               text = function(ctx)
                 if ctx.kind == "Yank" then
+                  return ctx.kind_icon .. ctx.icon_gap
+                end
+                if ctx.kind == "Copilot" then
                   return ctx.kind_icon .. ctx.icon_gap
                 end
                 local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
@@ -55,31 +59,11 @@ return {
         },
       },
     },
-    fuzzy = { implementation = "prefer_rust_with_warning" },
+    fuzzy = { implementation = "prefer_rust" },
     signature = { window = { border = "rounded" } },
     keymap = {
-      preset = "default",
-
-      ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
-      ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
-      ["<CR>"] = { "select_and_accept", "fallback" },
-      ["<C-y>"] = { "select_and_accept", "fallback" },
+      preset = "super-tab",
+      ["<CR>"] = { "accept", "fallback" },
     },
-    -- sources = {
-    --   default = { "lsp", "path", "buffer", "snippets", "yank" },
-    --
-    --   providers = {
-    --     yank = {
-    --       name = "yank",
-    --       module = "blink-yanky",
-    --       opts = {
-    --         minLength = 5,
-    --         onlyCurrentFiletype = true,
-    --         -- trigger_characters = { '"' },
-    --         kind_icon = "󰅍",
-    --       },
-    --     },
-    --   },
-    -- },
   },
 }

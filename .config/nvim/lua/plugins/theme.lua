@@ -3,6 +3,7 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       transparent = true,
+      -- style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
       styles = {
         sidebars = "transparent",
         floats = "transparent",

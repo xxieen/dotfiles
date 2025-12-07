@@ -1,0 +1,17 @@
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+
+      diagnostics = {
+        -- virtual_lines = true,
+        -- virtual_text = false,
+        update_in_insert = false,
+        float = {
+          border = "rounded",
+          source = true,
+        },
+      },
+    },
+  },
+}
